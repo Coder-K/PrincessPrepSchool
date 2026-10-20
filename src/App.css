@@ -1,0 +1,165 @@
+/*
+  Princess Prep School — shared design tokens and reusable colour classes.
+  The original layout uses Tailwind utility classes; keep Tailwind enabled for
+  spacing, grid, typography, responsive breakpoints and animations.
+  Change a palette value below to update every matching semantic colour class.
+*/
+
+:root {
+  /* Core palette */
+  --color-brand-pink: #eb4688b8;
+  --color-brand-purple: #6b3cc9;
+  --color-brand-lime: #eb4688b8;
+  --color-brand-lime-soft: #8846eb;
+  --color-brand-forest: #8846eb;
+  --color-brand-forest-light: #f8f5ef;
+  --color-brand-cream: #f8f5ef;
+  --color-brand-lilac: #b69af5;
+  --color-brand-pink-soft: #f3a8d3;
+  --color-brand-muted: #6b3cc9;
+  --color-brand-muted-light: #8846eb;
+
+  /* Shared component values */
+  --radius-card: 2rem;
+  --radius-control: 999px;
+  --shadow-card: 0 20px 50px #eb4688b8(23 53 45 / 14%);
+  --transition-standard: 220ms ease;
+}
+
+/* Semantic colour utilities */
+.bg-brand-pink {
+  background-color: var(--color-brand-pink) !important;
+}
+.text-brand-pink {
+  color: var(--color-brand-pink) !important;
+}
+.border-brand-pink {
+  border-color: var(--color-brand-pink) !important;
+}
+
+.bg-brand-purple {
+  background-color: var(--color-brand-purple) !important;
+}
+.text-brand-purple {
+  color: var(--color-brand-purple) !important;
+}
+.border-brand-purple {
+  border-color: var(--color-brand-purple) !important;
+}
+
+.bg-brand-lime {
+  background-color: var(--color-brand-lime) !important;
+}
+.text-brand-lime {
+  color: var(--color-brand-lime) !important;
+}
+.border-brand-lime {
+  border-color: var(--color-brand-lime) !important;
+}
+
+.bg-brand-lime-soft {
+  background-color: var(--color-brand-lime-soft) !important;
+}
+.text-brand-lime-soft {
+  color: var(--color-brand-lime-soft) !important;
+}
+.border-brand-lime-soft {
+  border-color: var(--color-brand-lime-soft) !important;
+}
+
+.bg-brand-forest {
+  background-color: var(--color-brand-forest) !important;
+}
+.text-brand-forest {
+  color: var(--color-brand-forest) !important;
+}
+.border-brand-forest {
+  border-color: var(--color-brand-forest) !important;
+}
+
+.bg-brand-cream {
+  background-color: var(--color-brand-cream) !important;
+}
+.text-brand-cream {
+  color: var(--color-brand-cream) !important;
+}
+.text-brand-muted {
+  color: var(--color-brand-muted) !important;
+}
+.text-brand-muted-light {
+  color: var(--color-brand-muted-light) !important;
+}
+.text-brand-forest-light {
+  color: var(--color-brand-pink-light) !important;
+}
+.bg-brand-lilac {
+  background-color: var(--color-brand-lilac) !important;
+}
+.text-brand-pink-soft {
+  color: var(--color-brand-pink-soft) !important;
+}
+
+/* Common repeated components */
+.program-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  padding: 1.05rem;
+  border-radius: var(--radius-card);
+  transition: transform var(--transition-standard);
+}
+.program-card:hover {
+  transform: translateY(-0.5rem);
+}
+.program-card--pink {
+  background-color: var(--color-brand-pink);
+}
+.program-card--purple {
+  background-color: var(--color-brand-purple);
+}
+.program-card--lime {
+  background-color: var(--color-brand-pink-soft);
+}
+
+.email,
+.whatsapp {
+  color: inherit;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.email:hover,
+.whatsapp:hover {
+  opacity: 0.78;
+}
+
+.marquee-track {
+  animation: princess-prep-marquee 28s linear infinite;
+}
+@keyframes princess-prep-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .program-card {
+    transition: none;
+  }
+  .program-card:hover {
+    transform: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .program-card {
+    min-height: 470px;
+    padding: 2rem;
+  }
+}
