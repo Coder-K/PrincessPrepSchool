@@ -52,7 +52,7 @@ const programs = [
 
     color: "program-card--pink",
 
-    image: "src\Images\Modling2.png",
+    image: "Modling2.png",
   },
 
   {
@@ -64,7 +64,7 @@ const programs = [
 
     color: "program-card--purple",
 
-    image: "src\Images\Eti.png",
+    image: "Eti.png",
   },
 
   {
@@ -76,7 +76,7 @@ const programs = [
 
     color: "program-card--lime",
 
-    image: "src\Images\dance.png",
+    image: "dance.png",
   },
 
   {
@@ -87,7 +87,7 @@ const programs = [
     text: "Girls receive structured preparation for pageants. Every four months, girls are entered into pageants to assess progress and gain practical experience",
 
     color: "program-card--purple",
-    image: "src\Images\Crown2.png",
+    image: "Crown2.png",
   },
 
   {
@@ -98,7 +98,7 @@ const programs = [
     text: "Girls develop clear communication, critical thinking, and confidence in expressing ideas. Training emphasises respectful argument, composure, and thinking under pressure..",
 
     color: "program-card--lime",
-    image: "src\Images\Speech.png",
+    image: "Speech.png",
   },
 
   {
@@ -109,7 +109,7 @@ const programs = [
     text: "Girls build strong leadership portfolios through volunteering, charity initiatives, fundraising, and community involvement. Plus short holiday attachments to build a resume.",
 
     color: "program-card--pink",
-    image: "src\Images\portfolio2.png",
+    image: "portfolio2.png",
   },
 
   {
@@ -120,7 +120,7 @@ const programs = [
     text: "Every other month the girls go on a trip to either apply classroom knowledge or observe professionals.",
 
     color: "program-card--lime",
-    image: "src\Images\best-practice.png",
+    image: "best-practice.png",
   },
 ];
 
@@ -277,7 +277,7 @@ export default function App() {
                     {program.text}
                   </p>
                   <img
-                    src={program.image}
+                    src={getImage(program.image)}
                     alt={program.title}
                     className="mt-flex w-flex h-80 object-cover "
                   />

@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
       minify: !emitSourcemaps,
     },
     plugins: [react(), tailwindcss()],
-    base: "/PrincessPrepSchool",
+    base: "/PrincessPrepSchool/",
 
     server: {
       host: process.env.FIGMA_DEV_SERVER_HOST || "0.0.0.0",
