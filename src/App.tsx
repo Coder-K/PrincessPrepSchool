@@ -122,6 +122,16 @@ const programs = [
     color: "program-card--lime",
     image: "best-practice.png",
   },
+  {
+    number: "08",
+
+    title: "PRACTICAL APPLICATION\n EXCURSIONS",
+
+    text: "Every other month the girls go on a trip to either apply classroom knowledge or observe professionals.",
+
+    color: "program-card--lime",
+    image: "crownPink.svg",
+  },
 ];
 
 export default function App() {
