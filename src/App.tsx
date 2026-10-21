@@ -59,7 +59,10 @@ const programs = [
 
     color: "program-card--pink",
 
-    image: Modling2,
+    image:
+      "https://raw.githubusercontent.com/Coder-K/PrincessPrepSchool/main/src/Images/Modling2.png",
+
+    icon: "♛",
   },
 
   {
@@ -69,9 +72,12 @@ const programs = [
 
     text: "Girls are taught refined behaviour, posture, manners, and social awareness. Teaching them to carry themselves with Grace",
 
-    color: "program-card--purple",
+    // color: "program-card--purple",
+    photo: "photo-champagne",
 
     image: Eti,
+
+    icon: "❁",
   },
 
   {
@@ -82,8 +88,11 @@ const programs = [
     text: "Girls are taught a fusion of Latin and modern dance and learn how tocustomize each routine to include theirown special talents, allowing them todiversify and perform confidently duringthe talent segment of pageants.",
 
     color: "program-card--lime",
+    photo: "photo-rose",
 
     image: dance,
+
+    icon: "♫",
   },
 
   {
@@ -93,8 +102,9 @@ const programs = [
 
     text: "Girls receive structured preparation for pageants. Every four months, girls are entered into pageants to assess progress and gain practical experience",
 
-    color: "program-card--purple",
+    photo: "photo-champagne",
     image: Crown2,
+    icon: "♛",
   },
 
   {
@@ -105,7 +115,10 @@ const programs = [
     text: "Girls develop clear communication, critical thinking, and confidence in expressing ideas. Training emphasises respectful argument, composure, and thinking under pressure..",
 
     color: "program-card--lime",
+    photo: "photo-rose",
+
     image: Speech,
+    icon: "❝",
   },
 
   {
@@ -117,6 +130,7 @@ const programs = [
 
     color: "program-card--pink",
     image: Portfolio,
+    icon: "✎",
   },
 
   {
@@ -127,7 +141,11 @@ const programs = [
     text: "Every other month the girls go on a trip to either apply classroom knowledge or observe professionals.",
 
     color: "program-card--lime",
+    photo: "photo-rose",
+    span: "program-feature",
+
     image: Practical,
+    icon: "✧",
   },
 ];
 
@@ -135,8 +153,8 @@ export default function App() {
   return (
     <main className="min-h-screen overflow-hidden bg-brand-cream text-brand-forest">
       <header className="absolute inset-x-0 top-0 z-20 border-b border-white/25 text-white">
-        <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-16">
-          <a className="flex items-center gap-2.5" href="#">
+        <div className=" container nav-shell ">
+          <a className="flex items-center  text-brand-pink gap-2.5" href="#">
             <img
               src={getImage("crownPink.svg")}
               alt="crown"
@@ -147,7 +165,7 @@ export default function App() {
 
           <nav
             aria-label="Main navigation"
-            className="hidden items-center gap-9 text-sm font-bold md:flex"
+            className="desktop-nav text-brand-forest"
           >
             <a className="transition-opacity hover:opacity-70" href="#programs">
               Curriculum
@@ -175,32 +193,28 @@ export default function App() {
         </div>
       </header>
 
-      <section className="relative min-h-[760px] bg-brand-forest text-white lg:min-h-[860px]">
-        <img
-          alt="Young women enjoying an elegant formal dinner"
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-65"
-          src={getImage("Background.png")}
-        />
-
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#8846eb(17,48,40,.96)_0%,#f8f5ef(17,48,40,.74)_43%,#f8f5ef(17,48,40,.12)_80%)]" />
-
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#17352D]/45 to-transparent" />
-
-        <div className="relative z-10 mx-auto flex min-h-[760px] max-w-[1440px] items-end px-5 pb-16 pt-36 md:px-10 lg:min-h-[860px] lg:px-16 lg:pb-20">
-          <div className="max-w-[800px]">
-            <div className="mb-7 flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-lime-soft">
-              <span className="h-px w-10 bg-current" />
-              Pageant Training and Portfolio Building Academy
+      <section id="home" className="hero quote-section">
+        <div className="hero-orbit orbit-one" aria-hidden="true"></div>
+        <div className="hero-orbit orbit-two" aria-hidden="true"></div>
+        <div className="hero-spark hero-spark-one" aria-hidden="true">
+          ✧
+        </div>
+        <div className="hero-spark hero-spark-two" aria-hidden="true">
+          ✦
+        </div>
+        <div className="container hero-grid">
+          <div className="hero-copy reveal">
+            <div className="eyebrow">
+              <span className="eyebrow-line"></span> THE BEGINNING OF SOMETHING
+              BEAUTIFUL
             </div>
-
-            <h1 className="font-display max-w-[780px] text-[clamp(4.5rem,9vw,8.2rem)] leading-[0.82] tracking-[-0.065em]">
-              Preparing young ladies to take on
-              <br />
+            <h1>
+              Preparing young ladies to take on{" "}
               <span className="relative inline-block italic text-brand-pink">
                 The World
                 <svg
                   aria-hidden="true"
-                  className="absolute -right-10 -top-6 hidden w-14 text-brand-lime-soft sm:block"
+                  className="absolute -right-10 -top-6 hidden w-14 text-brand-pink sm:block"
                   fill="none"
                   viewBox="0 0 64 48"
                 >
@@ -211,23 +225,74 @@ export default function App() {
                     strokeWidth="3"
                   />
                 </svg>
-              </span>{" "}
+              </span>
+              <span className="gold-period">.</span>
               with Elegance.
             </h1>
-
-            <div className="mt-9 flex flex-col gap-7 sm:flex-row sm:items-center sm:gap-10">
-              <p className="max-w-md text-base leading-7 text-white/78 md:text-lg">
-                Princess Prep School is a pageant training and scholarship
-                portfolio development academy dedicated to shaping confident,
-                elegant young ladies through structured training, mentorship,
-                and leadership development
-              </p>
+            <p className="hero-lede">
+              A pageant training and scholarship portfolio development academy
+              dedicated to shaping confident, elegant young ladies through
+              structured training, mentorship and leadership development.
+            </p>
+            <div className="hero-cta">
+              <a className="button button-primary button-large" href="#enroll">
+                Begin her journey
+                <span className="button-arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <a className="text-link" href="#programs">
+                Explore our curriculum <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div className="hero-note">
+              <span className="hero-note-icon" aria-hidden="true">
+                ✳
+              </span>
+              <span>Poise. Confidence. Kindness. Presence.</span>
             </div>
           </div>
+          <div
+            className="hero-visual reveal"
+            aria-label="Princess Prep School academy imagery"
+          >
+            <div className="hero-image-frame">
+              <img
+                src={getImage("Background.png")}
+                alt="Young ladies at an elegant event"
+              />
+              <div className="hero-image-overlay"></div>
+            </div>
+            <span className="photo-label">
+              <span className="label-spark">✦</span> ELEGANCE IS AN ATTITUDE
+            </span>
+            <div className="hero-medallion">
+              <span className="medallion-spark">✦</span>
+              <strong>
+                Bloom
+                <br />
+                with
+                <br />
+                <i>purpose</i>
+              </strong>
+              <span className="medallion-bottom">THE PRINCESS PREP WAY</span>
+            </div>
+            <div className="floating-seal">
+              <span>EST.</span>
+              <strong>✧</strong>
+              <span>TO SHINE</span>
+            </div>
+            <span className="hero-caption">
+              Empowering tomorrow's confident young women
+            </span>
+          </div>
+        </div>
+        <div className="hero-bottom-ornament" aria-hidden="true">
+          ✦
         </div>
       </section>
 
-      <section className="bg-brand-purple py-5 text-[#FFFFFF]">
+      <section className=" value-strip bg-brand-purple py-5 text-[#FFFFFF]">
         <div className="marquee-track flex min-w-max items-center gap-7 text-sm font-extrabold uppercase tracking-[0.14em]">
           {[...Array(2)].flatMap((_, set) =>
             ["Poise", "Confidence", "Kindness", "Presence"].map((item) => (
@@ -241,14 +306,15 @@ export default function App() {
         </div>
       </section>
 
-      <section className="px-5 py-24 md:px-10 lg:px-16 lg:py-32" id="programs">
-        <div className="mx-auto max-w-[1312px]">
+      <section id="programs" className="section curriculum-section">
+        <div className="container">
           <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-end">
             <div>
-              <p className="eyebrow">WHAT WE DO</p>
+              <p className="eyebrow">Our Foundatin For Excellences</p>
 
               <h2 className="font-display mt-5 max-w-2xl text-5xl leading-[0.98] tracking-[-0.045em] md:text-7xl">
-                Curriculum Break Down
+                Curriculum <br />
+                <em className="text-brand-pink">Break Down</em>
               </h2>
             </div>
 
@@ -262,119 +328,179 @@ export default function App() {
               route to get ahead in life beyond academics
             </p>
           </div>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <hr />
+          <br />
+          <div className=" program-grid">
             {programs.map((program) => (
               <article
-                className={`program-card ${program.color} group lg:p-9`}
+                className={`program-card ${program.span} reveal ${program.color}`}
                 key={program.number}
               >
-                <span className="text-brand-forest font-extrabold tracking-[0.16em]">
+                {/* <span className="text-brand-forest font-extrabold tracking-[0.16em]">
                   {program.number}
-                </span>
-
-                <div className="mt-5">
-                  <h3 className="font-display whitespace-pre-line text-[#FFFFFF] text-4xl leading-[0.98] tracking-[-0.035em] lg:text-5xl">
-                    {program.title}
-                  </h3>
-
-                  <div className="my-6 h-px bg-brand-forest/25" />
-
-                  <p className="max-w-xs text-sm font-medium leading-6 text-[#FFFFFF]">
-                    {program.text}
-                  </p>
+                </span> */}
+                <div
+                  className={`program-photo ${program.photo}`}
+                  key={program.number}
+                  data-art={program.icon}
+                >
                   <img
+                    loading="lazy"
                     src={program.image}
                     alt={program.title}
-                    className="mt-flex w-flex h-80 object-cover "
+                    className="mt-flex w-flex h-flex object-cover "
                   />
+                </div>
+                <div className="program-body">
+                  <span className="program-category"></span>
+                  <div className="mt-5">
+                    <h3>{program.title}</h3>
+                    <p>{program.text}</p>
+                  </div>
                 </div>
               </article>
             ))}
-            <section
-              id="requirements"
-              className="w-full pt-6 pb-0 lg:px-16 md:col-span-2"
-            >
-              <div className="program-card border  border-brand-forest/25 group text-center px-7 pt-7 pb-0 lg:px-9 lg:pt-9 ">
-                <h2 className="font-display whitespace-pre-line text-4xl leading-[0.98] tracking-[-0.035em] lg:text-5xl">
-                  Class Requirements
-                </h2>
-                <div className="my-6 h-px pb-0 bg-brand-forest/25" />
-                <ul className="list-none space-y-3 pl-6 pb-0 text-center leading-7">
-                  <li>Pair of old heels that fit</li>
-                  <li>A 2 Quire Book</li>
-                  <li>Attend class in school dress</li>
-                </ul>
-                <div className="flex flex-wrap justify-center items-center gap-6 mt-6">
-                  <img
-                    src={getImage("skirt.svg")}
-                    alt="skirt"
-                    className="w-40"
-                  />
-                  <img
-                    src={getImage("high-heels.svg")}
-                    alt="heels"
-                    className="w-40"
-                  />
-                  <img src={getImage("book.svg")} alt="book" className="w-40" />
-                </div>
-                ```
-              </div>
-            </section>
           </div>
         </div>
       </section>
 
-      <section
-        className="bg-brand-purple px-5 pt-20 pb-0 text-white md:px-10 lg:px-16 lg:pt-28"
-        id="fees"
-      >
+      <section className="quote-section" aria-label="Our philosophy">
+        <div className="container quote-content reveal">
+          <span className="quote-star" aria-hidden="true">
+            ✦
+          </span>
+          <p>
+            Not just preparing her
+            <br />
+            for the <em>spotlight.</em>
+            <br />
+            Preparing her for <em>life.</em>
+          </p>
+          <span className="quote-under">
+            CONFIDENCE THAT GOES FAR BEYOND THE STAGE
+          </span>
+        </div>
+      </section>
+
+      <section id="requirements" className="section requirements-section">
+        <div className="container requirements-layout">
+          <div className="requirements-heading reveal">
+            <p className="eyebrow">BASIC CLASS ESSENTIALS</p>
+            <h2>
+              Little things.
+              <br />
+              <em>Big Impact.</em>
+            </h2>
+            <p>
+              Getting ready for className is simple. Here's all your young lady
+              needs to bring along.
+            </p>
+            <a className="text-link" href="#enroll">
+              Questions about classes? <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div className="requirement-cards">
+            <div className="requirement-card reveal">
+              <span className="req-number">01</span>
+              <div className="req-icon" aria-hidden="true">
+                <img
+                  src={getImage("high-heels.svg")}
+                  alt="heels"
+                  className="w-flex"
+                />
+              </div>
+              <h3>A pair of heels</h3>
+              <p>An old pair of heels that fit comfortably.</p>
+            </div>
+            <div className="requirement-card reveal">
+              <span className="req-number">02</span>
+              <div className="req-icon" aria-hidden="true">
+                <img src={getImage("book.svg")} alt="heels" className="w-40" />
+              </div>
+              <h3>A 2-quire book</h3>
+              <p>A notebook for lessons, reflections and practice.</p>
+            </div>
+            <div className="requirement-card reveal">
+              <span className="req-number">03</span>
+              <div className="req-icon" aria-hidden="true">
+                <img src={getImage("skirt.svg")} alt="book" className="w-40" />
+                {/* <svg viewBox="0 0 72 72" fill="none">
+                  <path
+                    d="m24 16 12 9 12-9 12 11-10 11-5-5 4 24H23l4-24-5 5-10-11 12-11Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M36 25v32M28 43h16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg> */}
+              </div>
+              <h3>School dress</h3>
+              <p>Please attend className in school dress.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fees" className="fees-section">
         <div className="mx-auto grid max-w-[1312px] gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="fees-decoration fees-decoration-1" aria-hidden="true">
+            ✧
+          </div>
+          <div className="fees-decoration fees-decoration-2" aria-hidden="true">
+            ✦
+          </div>
+
           <div className="relative min-h-[560px]">
-            <div className="absolute left-0 top-0 h-[88%] w-[84%] overflow-hidden rounded-[0.8rem]">
+            <div className="fees-image reveal rounded-[0.8rem]">
               <img
                 src={getImage("backround2.png")}
                 alt="Little Princesses in a pageant"
                 className="h-full w-full object-cover"
               />
-            </div>
+              <div className="impact-card">
+                <p className="font-display text-6xl tracking-[-0.05em]">20%</p>
 
-            <div className="absolute bottom-0 right-0 w-56 rounded-[1.5rem] bg-brand-pink p-7 text-[#FFFFFF] shadow-2xl md:w-64">
-              <p className="font-display text-6xl tracking-[-0.05em]">20%</p>
-
-              <p className="mt-2 text-sm font-bold leading-5">
-                Of all proceeds go to The School for child enrichment programmes
-              </p>
+                <p className="mt-2 text-sm font-bold leading-5">
+                  Of all proceeds go to The School for child enrichment
+                  programmes
+                </p>
+              </div>
             </div>
           </div>
 
           <div className="lg:pl-12">
+            <p className="eyebrow eyebrow-light text-brand-pink-soft">
+              <span className="eyebrow "></span> SIMPLE & THOUGHTFUL PRICING
+            </p>
             <h2 className="font-display mt-5 text-5xl leading-[0.96] tracking-[-0.045em] md:text-7xl">
               Fees
               <br />
-              <span className="italic text-brand-lime">
-                R1100-All inclusive.
+              <span className="italic text-brand-pink-soft price">
+                R1100 <small>per month</small>
               </span>
             </h2>
 
             <div className="mt-10 grid gap-6 border-t border-white/20 pt-8 sm:grid-cols-2">
               {[
-                ["Weekly classes", "R 600 per Month"],
-
+                ["Weekly classes", "R 600 /month"],
                 [
                   "Competitions",
-
-                  "R 500 per month  \n (Covers all competition expenses including dresses,accessories and shoes)",
+                  "R 500 /month ",
+                  "(Covers all competition expenses including dresses,accessories and shoes)",
                 ],
-              ].map(([title, text]) => (
+              ].map(([title, text, comment]) => (
                 <div key={title}>
                   <p className="flex items-center gap-2 font-extrabold">
                     <span className="text-brand-lime">●</span>
-
                     {title}
                   </p>
-
                   <p className="mt-2 text-sm leading-6 text-white/60">{text}</p>
+                  <p className="fee-detail text-white">{comment}</p>
                 </div>
               ))}
             </div>
@@ -386,54 +512,78 @@ export default function App() {
               in advance. This makes pageant participation more affordable,
               predictable, and stress- free. Parents are free to choose to
               handle competition costs at their own discretion!
+              <strong>
+                Parents may also choose to manage competition expenses
+                independently.
+              </strong>
             </p>
           </div>
+          <a href="#enroll" className="button button-gold">
+            Talk to us about enrollment <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
 
-      <section className="px-5 pb-5 md:px-10 md:pb-10" id="enroll">
-        <div className="relative  mt-10 mx-auto max-w-[1360px] overflow-hidden rounded-[2rem] bg-brand-pink px-6 py-16 text-center md:px-16 md:py-24">
-          <div className="absolute -left-16 -top-20 size-64 rounded-full border-[45px] border-brand-lime-soft/80" />
-
-          <div className="absolute -bottom-32 -right-16 size-72 rounded-full bg-brand-lilac" />
-
-          <div className="relative">
-            <p className="mx-auto mb-6 w-fit rounded-full border border-brand-forest/25 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.16em]">
-              Enrollment open for 2026 -27
-            </p>
-
-            <h2 className="font-display mx-auto max-w-4xl text-5xl leading-[0.92] tracking-[-0.055em] md:text-8xl">
-              Contact US &
-              <span className="italic text-brand-purple"> Apply Now</span>
-            </h2>
-
-            <p className="mx-auto mt-7 max-w-xl text-base leading-7 text-brand-forest-light">
-              Email:
+      <section id="enroll" className="enroll-section">
+        <div className="container">
+          <div className="enroll-panel reveal">
+            <div className="enroll-decoration" aria-hidden="true">
+              ✧
+            </div>
+            <div className="enroll-copy">
+              <p className="eyebrow">
+                <span className="eyebrow-line"></span> ENROLLMENT OPEN • 2026–27
+              </p>
+              <h2>
+                Her next chapter
+                <br />
+                starts <em>here.</em>
+              </h2>
+              <p>
+                Ready to help her discover her confidence, character and
+                sparkle? We'd love to welcome you to Princess Prep School.
+              </p>
               <a
-                className="email ml-2"
-                href="mailto:info.princessprepschool@gmail.com"
-              >
-                info.princessprepschool@gmail.com
-              </a>
-              <hr />
-              Whatsapp:
-              <a
-                className="whatsapp ml-2"
-                href="https://wa.me/+27644844533"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe5r9y9c4mHnQbJNqw_hAqKf4saZrf3ifkn4oPceR_ZeINNqg/viewform?usp=dialog"
+                className="button button-primary button-large"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                064 484 4533
+                Start your application
+                <span className="button-arrow" aria-hidden="true">
+                  ↗
+                </span>
               </a>
-            </p>
-
-            <a
-              className="group mx-auto mt-9 flex w-fit items-center gap-5 rounded-full bg-brand-purple py-2 pl-7 pr-2 text-sm font-extrabold text-white"
-              href={`https://wa.me/+27644844533?text=${encodeURIComponent(message)}`}
-              target="_blank"
-            >
-              Start your application
-              <Spark />
-            </a>
+              <span className="enroll-helper">
+                Opens WhatsApp with a prepared message
+              </span>
+            </div>
+            <div className="enroll-contact">
+              <div className="contact-title">
+                LET'S TALK ABOUT HER FUTURE <span aria-hidden="true">✧</span>
+              </div>
+              <div className="contact-item">
+                <span>EMAIL US</span>
+                <a href="mailto:info.princessprepschool@gmail.com">
+                  info.princessprepschool@gmail.com
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <div className="contact-item">
+                <span>WHATSAPP US</span>
+                <a
+                  href="https://wa.me/27644844533"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  064 484 4533 <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <div className="contact-footer">
+                Every confident young woman has a beautiful story in the making.
+                <span>✦</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
